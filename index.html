@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movimentando um Personagem com Botões (Joystick)</title>
+    <style>
+      #image {
+        position: relative;
+      }
+      #buttons {
+        align-items: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="image" src="assets/gifs/atividade.gif" />
+
+    <div id="buttons">
+      <button id="up">⬆️ - CIMA</button>
+      <button id="down">⬇️ - BAIXO</button>
+      <button id="left">⬅️ - ESQUERDA</button>
+      <button id="right">➡️ - DIREITA</button>
+    </div>
+
+    <script>
+      let posTop = 0;
+      let posLeft = 0;
+
+      function CIMA() {
+        posTop -= 10;
+        image.style.top = posTop + "px";
+      }
+
+      function BAIXO() {
+        posTop += 10;
+        image.style.top = posTop + "px";
+      }
+
+      function ESQUERDA() {
+        posLeft -= 10;
+        image.style.left = posLeft + "px";
+      }
+
+      function DIREITA() {
+        posLeft += 10;
+        image.style.left = posLeft + "px";
+      }
+
+      document.getElementById("up").addEventListener("click", CIMA);
+      document.getElementById("down").addEventListener("click", BAIXO);
+      document.getElementById("left").addEventListener("click", ESQUERDA);
+      document.getElementById("right").addEventListener("click", DIREITA);
+    </script>
+  </body>
+</html>
