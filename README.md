@@ -1,2 +1,2 @@
 # joystick
-ATIVIDADE em HTML para mover um "git" pela tela
+ATIVIDADE em HTML para mover um "gif" pela tela
